@@ -6,5 +6,5 @@
     let text = 'Sydney'
     console.log(sayHi(text))
     let mes = [1, 2]
-    console.log(sayHi(mes))
+//     console.log(sayHi(mes))
  })()

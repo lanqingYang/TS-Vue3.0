@@ -1,0 +1,13 @@
+ 注意看版本！！！
+
+ webpack 3.x 的版本与 webpack-dev-server 3.x 的版本不兼容
+会出现  Error: Cannot find module 'webpack-cli/bin/config-yargs' 报错
+
+ 然后这里的ts-loader的版本也会出现不兼容的问题，这里用的是4.x
+
+
+
+原因：
+ 未安装webpack-cli的问题
+在webpack的3.x版本中 webpack和webpack-cli是在同一个包中
+但在4.x的新版本中 Webpack已经将两者分开来 以更好地管理它们 ，所以要安装webpack-cli
