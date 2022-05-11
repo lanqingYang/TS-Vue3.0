@@ -5,7 +5,7 @@
         return person.firstName + '_' + person.lastName;
     }
     var person = {
-        // firstName: '可',
+        firstName: '可',
         lastName: '莉'
     };
     console.log(showFullName(person));

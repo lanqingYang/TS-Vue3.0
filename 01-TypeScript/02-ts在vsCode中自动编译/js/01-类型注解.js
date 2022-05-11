@@ -5,6 +5,6 @@
     }
     var text = 'Sydney';
     console.log(sayHi(text));
-    var mes = [1, 2];
-    console.log(sayHi(mes));
+    /*    let mes = [1, 2]
+       console.log(sayHi(mes)) */
 })();

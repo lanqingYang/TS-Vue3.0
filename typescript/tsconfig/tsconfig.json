@@ -1,4 +1,6 @@
 {
+  "include": ["src/demo2.ts"] /* 编译哪些文件，include还可以换成 files */,
+  // "exclude": ["src/demo2.ts"] /* 除了哪些文件不编译 */,
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
@@ -12,28 +14,22 @@
     // "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
     // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
-    // "sourceMap": true,                           /* Generates corresponding '.map' file. */
+    "sourceMap": true /*js->ts文件对应，看到源代码哪儿报错 Generates corresponding '.map' file. */,
     // "outFile": "./",                             /* Concatenate and emit output to single file. */
-    // "outDir": "./",                              /* Redirect output structure to the directory. */
-
-    "outDir": "./js" /* 把ts文件最终编译后放在js目录中 */,
-
-    // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "./build" /* 编译成js后的文件 Redirect output structure to the directory. */,
+    "rootDir": "./src" /*入口文件 Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
     // "composite": true,                           /* Enable project compilation */
     // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
-    // "removeComments": true,                      /* Do not emit comments to output. */
+    "removeComments": true /* 编译的时候去掉注释 */,
     // "noEmit": true,                              /* Do not emit outputs. */
     // "importHelpers": true,                       /* Import emit helpers from 'tslib'. */
     // "downlevelIteration": true,                  /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     // "isolatedModules": true,                     /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 
     /* Strict Type-Checking Options */
-    // "strict": true,                                 /* Enable all strict type-checking options. */
-
-    "strict": false /* 不使用严格模式 */,
-
-    // "noImplicitAny": true,                       /* Raise error on expressions and declarations with an implied 'any' type. */
-    // "strictNullChecks": true,                    /* Enable strict null checks. */
+    "strict": true /* 编译和书写规范严格按照规范写，只有为false的时候，它后面的几项 到断层才会起作用 */,
+    // "noImplicitAny": true,     /*允许注解类型any可以不特意标明 */
+    // "strictNullChecks": true /*不允许出现nul值 Enable strict null checks. */,
     // "strictFunctionTypes": true,                 /* Enable strict checking of function types. */
     // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
     // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
@@ -41,8 +37,8 @@
     // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
 
     /* Additional Checks */
-    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
-    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    "noUnusedLocals": true /*没用到的变量抛出错误 Report errors on unused locals. */,
+    // "noUnusedParameters": true, /* 没用到的方法抛出错误Report errors on unused parameters. */
     // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
     // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
     // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
@@ -64,7 +60,7 @@
     /* Source Map Options */
     // "sourceRoot": "",                            /* Specify the location where debugger should locate TypeScript files instead of source locations. */
     // "mapRoot": "",                               /* Specify the location where debugger should locate map files instead of generated locations. */
-    // "inlineSourceMap": true,                     /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSourceMap": true /* Emit a single file with source maps instead of having a separate file. */,
     // "inlineSources": true,                       /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
 
     /* Experimental Options */

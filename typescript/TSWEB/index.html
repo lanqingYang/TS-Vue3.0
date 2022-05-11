@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- import方式 引入require， 因为编译之后js有define语法，amd规范代码，不能在浏览器运行，用node，所以引入require.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+    <script src="./build/page.js"></script>
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /* 1.----命名空间方式--- */
+    // new Home.Page();
+
+    /* 2------import 方式 */
+    require(["page"], function (page) {
+      new page.default();
+    });
+  </script>
+</html>
